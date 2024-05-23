@@ -38,6 +38,11 @@ public static int generateValidAmount(int balance) {
 
     return new CardInfo("5559000000000002", "0f3f5c2a-249e-4c3d-8287-09f7a039391d");
   }
+
+  public static CardInfo getThirdCardInfo() {
+
+      return new CardInfo("5559000000000003", "0f3f5c2a-249e-4c3d-8287-09f7a039391d");
+    }
   @Value
   public static class CardInfo {
     String cardNumber;

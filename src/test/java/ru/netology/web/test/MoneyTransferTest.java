@@ -66,8 +66,8 @@ class MoneyTransferTest {
 
     @Test
     void shouldErrorMassage() {
-        int sum = generateInvalidAmount(secondCardBalance);
-        var thirdCardInfo = new CardInfo("5559000000000003", "0f3f5c2a-249e-4c3d-8287-09f7a039391d");
+        int sum = generateValidAmount(secondCardBalance);
+        var thirdCardInfo = getThirdCardInfo();
         var transMoney = dashboardPage.selectCardForTransfer(firstCardInfo);
         dashboardPage = transMoney.toTransMoney(String.valueOf(sum), thirdCardInfo);
         transMoney.findErrorMassage("Ошибка! Произошла ошибка");
